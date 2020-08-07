@@ -1,1 +1,403 @@
-/* No CSS */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: gainsboro;
+  overflow-x: hidden;
+  line-height: 1.6;
+  height: 100vh; }
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
+
+@keyframes copyright-name {
+  50% {
+    padding: 2rem;
+    transform: scale(1); }
+  75% {
+    transform: scale(1.25);
+    letter-spacing: 0.5rem; }
+  100% {
+    letter-spacing: 1rem;
+    padding: 2rem;
+    transform: scale(1.25); } }
+
+.header {
+  display: flex;
+  height: 150vh;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  margin-bottom: 20rem; }
+  .header-bg-img-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    float: left; }
+  .header-bg-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center; }
+  .header-bg-img-1 {
+    background-image: linear-gradient(to right bottom, rgba(211, 142, 63, 0.4), rgba(194, 80, 74, 0.4)), url(../img/fight-1.jpg); }
+  .header-bg-img-2 {
+    background-image: linear-gradient(to right bottom, rgba(211, 142, 63, 0.4), rgba(194, 80, 74, 0.4)), url(../img/fight-3.jpg); }
+  .header-bg-img-3 {
+    background-image: linear-gradient(to right bottom, rgba(211, 142, 63, 0.4), rgba(194, 80, 74, 0.4)), url(../img/fight-2.jpg); }
+  .header-bg-img-4 {
+    background-image: linear-gradient(to right bottom, rgba(211, 142, 63, 0.4), rgba(194, 80, 74, 0.4)), url(../img/eye2.jpg); }
+  .header-joke-text, .header-joke-quotes {
+    color: white; }
+  .header-joke-text {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 7rem;
+    padding: 0 1rem;
+    line-height: 2;
+    letter-spacing: 0.9rem;
+    font-family: "Oswald", sans-serif; }
+  .header-joke-quotes {
+    font-size: 9rem;
+    padding: 0;
+    margin: 0; }
+  .header-box {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 50rem;
+    color: #fff;
+    padding: 4.5rem 3rem 6rem 3rem;
+    top: 45%;
+    left: 13%;
+    box-shadow: 1rem 1rem 1.5rem rgba(194, 112, 94, 0.3);
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+  .header-text {
+    font-size: 2.1rem;
+    font-weight: bold;
+    align-self: flex-start;
+    text-align: left;
+    line-height: 1.6; }
+  .header-heading {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0.35rem; }
+
+.section-skills {
+  padding: 35rem 0 10rem 0; }
+
+.section-skills-cards {
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, max-content);
+  justify-items: center;
+  align-items: center; }
+
+.section-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10rem;
+  background-image: linear-gradient(to right bottom, #c2705e, #d38e3f);
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.section-facts {
+  clip-path: polygon(0 0, 100% 13%, 100% 87%, 0 100%);
+  padding: 35rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to right bottom, #c2705e, #d38e3f); }
+
+.section-facts-box {
+  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, max-content); }
+
+.section-generate {
+  padding: 5rem 0;
+  margin-top: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 85vh;
+  background-image: linear-gradient(to right bottom, #c2705e, #d38e3f); }
+  .section-generate-box {
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+    height: 85vh;
+    position: relative;
+    z-index: 10; }
+  .section-generate-img {
+    width: auto;
+    height: 85vh;
+    position: absolute;
+    transition: 1s all; }
+    .section-generate-img:hover {
+      filter: brightness(140%);
+      box-shadow: 1rem 1rem 1.5rem rgba(255, 255, 255, 0.3); }
+  .section-generate-img--1 {
+    left: 0%; }
+  .section-generate-img--2 {
+    left: 25%; }
+  .section-generate-img--3 {
+    left: 50%; }
+  .section-generate-img--4 {
+    top: 0%;
+    left: 75%; }
+
+.footer {
+  height: 55vh;
+  width: 100vw;
+  background-color: #383838;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .footer-copyright {
+    font-size: 3rem;
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0.5rem; }
+  .footer-copyright-name {
+    font-size: 4rem;
+    display: inline-block;
+    transition: 0.5s padding, 0.6s 0.3s transform, 0.3s 0.8s letter-spacing; }
+    .footer-copyright-name:hover {
+      padding: 6rem;
+      color: #d38e3f;
+      transform: scale(1.25);
+      letter-spacing: 1rem; }
+
+.section-action {
+  margin: 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh; }
+  .section-action-top {
+    margin: 0 5rem;
+    height: 40vh;
+    padding: 3.5rem;
+    background: #f0f0f0;
+    align-self: stretch;
+    border-radius: 0.2rem;
+    box-shadow: 1rem 1rem 1.5rem rgba(0, 0, 0, 0.3);
+    transition: 0.5s all; }
+    .section-action-top:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 1rem 1rem 1.5rem rgba(194, 112, 94, 0.3); }
+  .section-action-text {
+    color: #fff;
+    font-size: 3rem;
+    font-family: "Oswald", sans-serif;
+    color: #8a8a8a; }
+
+.align-self-center {
+  align-self: center; }
+
+.button {
+  font-family: "Oswald", sans-serif;
+  padding: 1.5rem 6rem;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: 400;
+  border-radius: 0.5rem;
+  letter-spacing: 0.3rem;
+  transition: 0.4s all;
+  text-transform: uppercase;
+  z-index: 1000;
+  cursor: pointer; }
+  .button--white {
+    color: #c2705e;
+    background-color: #fff; }
+  .button--red {
+    color: #fff;
+    background: #d38e3f; }
+  .button:hover {
+    border-radius: 0.1rem;
+    box-shadow: 0.4rem 0.4rem 1rem rgba(0, 0, 0, 0.3); }
+
+.heading-primary {
+  display: inline-block;
+  padding: 1rem 0;
+  font-size: 5.5rem;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s all; }
+  .heading-primary:hover {
+    transform: skewX(-15deg) scaleY(1.5); }
+  .heading-primary--white {
+    color: #fff; }
+  .heading-primary--orange {
+    color: #d38e3f; }
+  .heading-primary-top {
+    margin-bottom: 2rem;
+    display: block;
+    margin-right: 20rem; }
+  .heading-primary-bottom {
+    display: block;
+    margin-left: 25rem; }
+
+.heading-secondary {
+  text-align: center;
+  transition: 1s all; }
+  .heading-secondary:hover {
+    transform: scale(1.05); }
+  .heading-secondary--white {
+    color: #fff; }
+  .heading-secondary-big {
+    display: block;
+    text-transform: uppercase;
+    font-size: 4rem;
+    letter-spacing: 1.5rem; }
+  .heading-secondary-small {
+    margin-top: 1rem;
+    display: block;
+    font-size: 2.5rem;
+    letter-spacing: 0.75rem; }
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: whitesmoke;
+  box-shadow: 0.4rem 0.4rem 1rem rgba(0, 0, 0, 0.3);
+  width: 40rem;
+  height: 50rem;
+  padding: 2.5rem;
+  transition: 0.25s all;
+  border-bottom: 0.3rem solid #c2705e;
+  border-radius: 0.25rem; }
+  .card-text {
+    margin-top: 4rem;
+    color: #8a8a8a;
+    font-size: 1.8rem;
+    letter-spacing: 0.25rem;
+    font-weight: bold; }
+  .card-heading {
+    font-size: 3rem;
+    color: #868686;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif; }
+  .card-1 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2; }
+  .card-2 {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4; }
+  .card-3 {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3; }
+  .card-4 {
+    grid-row: 3/ 4;
+    grid-column: 1 / 2; }
+  .card-5 {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4; }
+  .card-icon {
+    fill: #c2705e;
+    height: 10rem;
+    width: 10rem;
+    margin-bottom: 1.5rem; }
+  .card:hover {
+    transform: scale(1.01);
+    box-shadow: 1rem 1rem 1.5rem rgba(211, 142, 63, 0.3); }
+
+.fact {
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  align-items: center;
+  height: 40rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.5s 0.2s ease-in-out all;
+  box-shadow: 0.4rem 0.4rem 1rem rgba(0, 0, 0, 0.3); }
+  .fact-text {
+    color: #fff;
+    font-size: 4rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    transition: 0.5s all; }
+  .fact-icon {
+    fill: #d38e3f;
+    transform: scale(0.7); }
+  .fact:hover:nth-child(even) p {
+    transform: translateX(-5rem) skewX(7deg); }
+  .fact:hover:nth-child(odd) p {
+    transform: translateX(5rem) skewX(-7deg); }
+  .fact:nth-child(even) p {
+    margin-left: 15rem; }
+  .fact:nth-child(odd) p {
+    margin-right: 15rem; }
+  .fact--1 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 5;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../img/space.jpg); }
+  .fact--2 {
+    grid-row: 2 / 3;
+    grid-column: 2 / -1;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../img/eye2.jpg); }
+  .fact--3 {
+    grid-row: 3 / 4;
+    grid-column: 1 / 5;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../img/exception.jpg); }
+
+.joke {
+  font-size: 4rem;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 2rem; }
+
+.margin-top-small {
+  margin-top: 2.5rem; }
+
+.margin-top-medium {
+  margin-top: 5rem; }
+
+.margin-top-big {
+  margin-top: 7.5rem; }
+
+.margin-top-gigantic {
+  margin-top: 10rem; }
+
+.margin-bottom-small {
+  margin-bottom: 2.5rem; }
+
+.margin-bottom-medium {
+  margin-bottom: 5rem; }
+
+.margin-bottom-big {
+  margin-bottom: 7.5rem; }
+
+.margin-bottom-gigantic {
+  margin-bottom: 10rem; }

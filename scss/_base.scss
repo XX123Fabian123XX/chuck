@@ -1,6 +1,50 @@
-/* font-family: "Montserrat", sans-serif;
-font-family: "Oswald", sans-serif; */
+// colors
+$color-primary: #c2705e;
+$color-secondary: #d38e3f;
+$color-tertiary: #c2504a;
+$color-white: #fff;
+$color-black: #000;
 
-/* color-primary:#C24F35
-color-secondary:#DB6E3B
-color-tertiary:#D93830 */
+/// mixins
+@mixin font-text {
+  font-family: "Montserrat", sans-serif;
+}
+
+@mixin font-special {
+  font-family: "Oswald", sans-serif;
+}
+
+@mixin box-shadow($color) {
+  box-shadow: 0.4rem 0.4rem 1rem rgba($color, 0.3);
+}
+
+@mixin box-shadow-big($color) {
+  box-shadow: 1rem 1rem 1.5rem rgba($color, 0.3);
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include font-text;
+  background-color: rgb(220, 220, 220);
+  overflow-x: hidden;
+  line-height: 1.6;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
