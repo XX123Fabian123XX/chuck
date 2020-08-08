@@ -1,6 +1,7 @@
+////////////////////////////////////////////////////
+///////////// HEADER
 .header {
   position: relative;
-
   &-slider {
     width: 500%;
     position: relative;
@@ -17,8 +18,6 @@
     background-size: cover;
     background-position: center;
     float: left;
-    z-index: 5;
-    display: flex;
   }
 
   &-bg-img-1 {
@@ -27,7 +26,7 @@
         rgba($color-secondary, 0.4),
         rgba($color-primary, 0.4)
       ),
-      url(../img/header-small.jpg);
+      url(../img/header-1.jpg);
   }
 
   &-bg-img-2 {
@@ -36,7 +35,7 @@
         rgba($color-secondary, 0.4),
         rgba($color-tertiary, 0.4)
       ),
-      url(../img/header-1-small.jpg);
+      url(../img/header-2.jpg);
   }
 
   &-bg-img-3 {
@@ -45,7 +44,7 @@
         rgba($color-secondary, 0.4),
         rgba($color-tertiary, 0.4)
       ),
-      url(../img/header-2-small.jpg);
+      url(../img/header-3.jpg);
   }
 
   &-bg-img-4 {
@@ -54,10 +53,10 @@
         rgba($color-secondary, 0.4),
         rgba($color-tertiary, 0.4)
       ),
-      url(../img/header-3-small.jpg);
+      url(../img/header-4.jpg);
   }
 
-  &-joke {
+  &-text {
     color: white;
     display: inline;
     text-transform: uppercase;
@@ -66,11 +65,10 @@
     line-height: 2;
     letter-spacing: 0.9rem;
     text-align: center;
-    @include font-special;
+    @include font-text-2;
   }
 
   &-box {
-    z-index: 1000;
     position: absolute;
     background-color: rgba($color-black, 0.45);
     width: 50rem;
@@ -83,40 +81,41 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    &-text {
+      font-size: 2.1rem;
+      font-weight: bold;
+      align-self: flex-start;
+      text-align: left;
+      line-height: 1.6;
+      letter-spacing: 0.1rem;
+    }
   }
 
-  &-text {
-    font-size: 2.1rem;
-    font-weight: bold;
-    align-self: flex-start;
-    text-align: left;
-    line-height: 1.6;
-  }
-
-  &-heading {
+  &-subheading {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    @include font-special;
+    @include font-text-2;
     letter-spacing: 0.35rem;
   }
 }
 
-.section {
-  &-skills {
-    padding: 35rem 0 10rem 0;
-  }
+////////////////////////////////////////////////////
+///////////// SECTION SKILLS
+.section-skills {
+  padding: 35rem 0 10rem 0;
 
-  &-skills-cards {
-    padding-top: 5rem;
+  &-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, max-content);
     justify-items: center;
     align-items: center;
+
+    padding-top: 10rem;
   }
 
   &-box {
-    // clip-path: polygon(% 0%, 100% 0, 100% 85%, 85% 100%, 0% 100%, 0% 15%);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -126,116 +125,37 @@
       $color-primary,
       $color-quaternary
     );
-    box-shadow: 1rem 1rem 2rem rgba($color-black, 0.2);
+    @include box-shadow($color-black);
   }
 }
 
+////////////////////////////////////////////////////
+///////////// FACTS
 .section-facts {
-  clip-path: polygon(0 0, 100% 13%, 100% 87%, 0 100%);
-  padding: 35rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  clip-path: polygon(0 0, 100% 13%, 100% 87%, 0 100%);
+  padding: 35rem 0;
+
   background-image: linear-gradient(
     to right bottom,
     $color-primary 45%,
     rgba($color-quaternary, 0.75),
     $color-secondary 85%
   );
-}
 
-.section-facts-box {
-  flex-direction: column;
-
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, max-content);
-}
-
-.section-generate {
-  padding: 5rem 0;
-  margin-top: 15rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 85vh;
-  background-image: linear-gradient(
-    to right bottom,
-    $color-primary,
-    $color-secondary
-  );
   &-box {
-    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
-
-    height: 85vh;
-    position: relative;
-    z-index: 10;
-  }
-
-  &-img {
-    width: auto;
-
-    position: absolute;
-    transition: 1s all;
-    &:hover {
-      filter: brightness(110%);
-      @include box-shadow-big($color-white);
-    }
-  }
-
-  &-img--1 {
-    left: -15%;
-    height: 85vh;
-  }
-
-  &-img--2 {
-    left: 25%;
-    height: 85vh;
-  }
-
-  &-img--3 {
-    left: 55%;
-    height: 85vh;
-  }
-
-  &-img--4 {
-    height: 90vh;
-    left: 75%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, max-content);
   }
 }
 
-.footer {
-  height: 55vh;
-  width: 100vw;
-  background-color: $color-grey-5;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &-copyright {
-    font-size: 3rem;
-    color: $color-white;
-    @include font-special;
-    letter-spacing: 0.5rem;
-  }
-
-  &-copyright-name {
-    @include font-special2;
-    font-size: 4rem;
-    display: inline-block;
-    transition: 0.5s padding, 0.6s 0.3s transform, 0.3s 0.8s letter-spacing;
-    letter-spacing: 1rem;
-    &:hover {
-      padding: 8rem;
-      color: $color-secondary;
-      transform: scale(1.25);
-      letter-spacing: 1.5rem;
-    }
-  }
-}
-
-.section-action {
+////////////////////////////////////////////////////
+///////////// SECTION GENERATE FACT
+.section-generate-fact {
   margin: 5rem 0;
   display: flex;
   align-items: center;
@@ -262,7 +182,69 @@
   &-text {
     color: $color-white;
     font-size: 3rem;
-    @include font-special;
-    color: rgb(138, 138, 138);
+    @include font-text-2;
+    color: $color-grey-1;
+  }
+}
+
+////////////////////////////////////////////////////
+///////////// SECTION GALLERY
+.section-gallery {
+  padding: 10rem 0;
+  margin-top: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary,
+    $color-secondary
+  );
+}
+
+////////////////////////////////////////////////////
+///////////// FOOTER
+.footer {
+  height: 65vh;
+  width: 100vw;
+  background-color: $color-grey-5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &-icon {
+    width: 6rem;
+    height: 6rem;
+    fill: $color-grey-6;
+    transition: 0.25s fill, 0.4s 0.3s transform;
+
+    &:hover {
+      fill: $color-secondary;
+      transform: scale(1.5) rotate(360deg);
+    }
+  }
+
+  &-copyright {
+    font-size: 3rem;
+    color: $color-white;
+    @include font-text-2;
+    letter-spacing: 0.5rem;
+  }
+
+  &-copyright-name {
+    @include font-heading;
+    font-size: 4rem;
+    display: inline-block;
+    transition: 0.5s padding, 0.6s 0.3s transform, 0.3s 0.8s letter-spacing;
+    letter-spacing: 1rem;
+
+    &:hover {
+      padding: 0 8rem;
+      color: $color-secondary;
+      transform: scale(1.25);
+      letter-spacing: 1.5rem;
+    }
   }
 }

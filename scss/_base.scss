@@ -1,9 +1,5 @@
-// colors
-// $color-primary: #c2705e;
-// $color-secondary: #d38e3f;
-// $color-tertiary: #c2504a;
-// $color-quaternary: rgb(250, 224, 79);
-
+////////////////////////////////////////////////////
+///////////// COLORS
 $color-primary: #c27e5e;
 $color-secondary: #d38e3f;
 $color-tertiary: #c2504a;
@@ -16,17 +12,19 @@ $color-grey-2: rgb(134, 134, 134);
 $color-grey-3: rgb(247, 247, 247);
 $color-grey-4: rgb(245, 245, 245);
 $color-grey-5: rgb(88, 88, 88);
+$color-grey-6: rgb(235, 235, 235);
 
-/// mixins
-@mixin font-text {
+////////////////////////////////////////////////////
+///////////// MIXINS
+@mixin font-text-1 {
   font-family: "Montserrat", sans-serif;
 }
 
-@mixin font-special {
+@mixin font-text-2 {
   font-family: "Oswald", sans-serif;
 }
 
-@mixin font-special2 {
+@mixin font-heading {
   font-family: "Permanent Marker", cursive;
 }
 
@@ -37,6 +35,8 @@ $color-grey-5: rgb(88, 88, 88);
 @mixin box-shadow-big($color) {
   box-shadow: 1rem 1rem 1.5rem rgba($color, 0.3);
 }
+
+/// RESET DEFAULT STYLES
 *,
 *::after,
 *::before {
@@ -46,13 +46,12 @@ $color-grey-5: rgb(88, 88, 88);
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // 10px -> 1rem
 }
 
 body {
-  @include font-text;
+  @include font-text-1;
   background-color: $color-grey-3;
-  // overflow-x: hidden;
   line-height: 1.6;
   height: 100vh;
 }
@@ -63,4 +62,42 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+////////////////////////////////////////////////////
+///////////// UTILITIES
+.margin-top-small {
+  margin-top: 2.5rem;
+}
+
+.margin-top-medium {
+  margin-top: 5rem;
+}
+
+.margin-top-big {
+  margin-top: 7.5rem;
+}
+
+.margin-top-gigantic {
+  margin-top: 10rem;
+}
+
+.margin-bottom-small {
+  margin-bottom: 2.5rem;
+}
+
+.margin-bottom-medium {
+  margin-bottom: 5rem;
+}
+
+.margin-bottom-big {
+  margin-bottom: 7.5rem;
+}
+
+.margin-bottom-gigantic {
+  margin-bottom: 10rem;
+}
+
+.align-self-center {
+  align-self: center;
 }
