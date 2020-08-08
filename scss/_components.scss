@@ -1,5 +1,4 @@
 /// button
-
 .align-self-center {
   align-self: center;
 }
@@ -24,7 +23,7 @@
 
   &--red {
     color: $color-white;
-    background: $color-secondary;
+    background-color: $color-secondary;
   }
 
   &:hover {
@@ -39,11 +38,11 @@
     display: inline-block;
     padding: 1rem 0;
     font-size: 5.5rem;
-    @include font-special;
+    @include font-special2;
     letter-spacing: 2rem;
     text-align: center;
     text-transform: uppercase;
-
+    font-weight: 200;
     transition: 0.5s all;
 
     &:hover {
@@ -55,7 +54,14 @@
     }
 
     &--orange {
-      color: $color-secondary;
+      background-image: linear-gradient(
+        to right,
+        $color-secondary,
+        $color-quaternary
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+      // color: rgba(240, 198, 14, 0.918);
     }
 
     &-top {
@@ -103,7 +109,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(245, 245, 245);
+
+  background-color: $color-grey-4;
   @include box-shadow($color-black);
   width: 40rem;
   height: 50rem;
@@ -116,7 +123,7 @@
 
   &-text {
     margin-top: 4rem;
-    color: rgb(138, 138, 138);
+    color: $color-grey-1;
     font-size: 1.8rem;
     letter-spacing: 0.25rem;
     font-weight: bold;
@@ -124,7 +131,7 @@
 
   &-heading {
     font-size: 3rem;
-    color: rgb(134, 134, 134);
+    color: $color-grey-2;
     text-transform: uppercase;
     @include font-special;
   }
@@ -230,7 +237,7 @@
         rgba($color-white, 0.3),
         rgba($color-white, 0.3)
       ),
-      url(../img/space.jpg);
+      url(../img/space-small.jpg);
   }
 
   &--2 {
@@ -241,7 +248,7 @@
         rgba($color-white, 0.3),
         rgba($color-white, 0.3)
       ),
-      url(../img/eye2.jpg);
+      url(../img/eye2-small.jpg);
   }
 
   &--3 {
@@ -252,7 +259,7 @@
         rgba($color-white, 0.3),
         rgba($color-white, 0.3)
       ),
-      url(../img/exception.jpg);
+      url(../img/exception-small.jpg);
   }
 }
 

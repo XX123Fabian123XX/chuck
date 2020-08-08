@@ -1,17 +1,37 @@
-@keyframes copyright-name {
+@keyframes slider {
+  0% {
+    right: 0%;
+  }
+
+  20% {
+    right: 0%;
+  }
+
+  25% {
+    right: 100%;
+  }
+
+  45% {
+    right: 100%;
+  }
+
   50% {
-    padding: 2rem;
-    transform: scale(1);
+    right: 200%;
+  }
+
+  70% {
+    right: 200%;
   }
 
   75% {
-    transform: scale(1.25);
-    letter-spacing: 0.5rem;
+    right: 300%;
+  }
+
+  95% {
+    right: 300%;
   }
 
   100% {
-    letter-spacing: 1rem;
-    padding: 2rem;
-    transform: scale(1.25);
+    right: 400%;
   }
 }

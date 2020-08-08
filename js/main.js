@@ -10,11 +10,16 @@ const fetchFacts  = async () => {
 const updateFields = async () => {
     const data = await fetchFacts();
     console.log(data.value.length)
-    if (data.value.length >= 300) {
-        textField.style.fontSize = "2.5rem"
+    if (data.value.length >= 600) {
+        textField.style.fontsSize = "1.7rem"
+    }
+     else if (data.value.length >= 500) {
+        textField.style.fontSize = "2rem"
     } else if (data.value.length >= 400) {
-        textField.style.fontSize = "2rem";
-    } 
+        textField.style.fontSize = "2.2rem";
+    } else if (data.value.length >=250) {
+        textField.style.fontSize = "2.5rem"
+    }
     else {
         textField.style.fontSize = "3rem";
     }

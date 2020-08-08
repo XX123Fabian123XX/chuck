@@ -1,39 +1,33 @@
 .header {
-  display: flex;
-  height: 150vh;
-  flex-direction: column;
-  align-items: center;
   position: relative;
 
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  height: 100vh;
-
-  margin-bottom: 20rem;
-
-  &-bg-img-box {
+  &-slider {
+    width: 500%;
     position: relative;
-    width: 100%;
-    height: 100%;
-    float: left;
+    animation: slider 25s infinite;
+    height: 100vh;
   }
 
   &-bg-img {
-    width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 20%;
+    height: 100vh;
     background-size: cover;
     background-position: center;
+    float: left;
+    z-index: 5;
+    display: flex;
   }
 
   &-bg-img-1 {
     background-image: linear-gradient(
         to right bottom,
         rgba($color-secondary, 0.4),
-        rgba($color-tertiary, 0.4)
+        rgba($color-primary, 0.4)
       ),
-      url(../img/fight-1.jpg);
+      url(../img/header-small.jpg);
   }
 
   &-bg-img-2 {
@@ -42,7 +36,7 @@
         rgba($color-secondary, 0.4),
         rgba($color-tertiary, 0.4)
       ),
-      url(../img/fight-3.jpg);
+      url(../img/header-1-small.jpg);
   }
 
   &-bg-img-3 {
@@ -51,7 +45,7 @@
         rgba($color-secondary, 0.4),
         rgba($color-tertiary, 0.4)
       ),
-      url(../img/fight-2.jpg);
+      url(../img/header-2-small.jpg);
   }
 
   &-bg-img-4 {
@@ -60,38 +54,30 @@
         rgba($color-secondary, 0.4),
         rgba($color-tertiary, 0.4)
       ),
-      url(../img/eye2.jpg);
+      url(../img/header-3-small.jpg);
   }
 
-  &-joke-text,
-  &-joke-quotes {
+  &-joke {
     color: white;
-  }
-
-  &-joke-text {
     display: inline;
     text-transform: uppercase;
-    font-size: 7rem;
+    font-size: 5.5rem;
     padding: 0 1rem;
     line-height: 2;
     letter-spacing: 0.9rem;
+    text-align: center;
     @include font-special;
   }
 
-  &-joke-quotes {
-    font-size: 9rem;
-    padding: 0;
-    margin: 0;
-  }
-
   &-box {
+    z-index: 1000;
     position: absolute;
-    background-color: rgba($color-black, 0.4);
+    background-color: rgba($color-black, 0.45);
     width: 50rem;
     color: $color-white;
-    padding: 4.5rem 3rem 6rem 3rem;
-    top: 45%;
-    left: 13%;
+    padding: 4.5rem 3rem 13rem 3rem;
+    top: 35%;
+    left: 8%;
     @include box-shadow-big($color-primary);
     border-radius: 0.25rem;
     display: flex;
@@ -130,6 +116,7 @@
   }
 
   &-box {
+    // clip-path: polygon(% 0%, 100% 0, 100% 85%, 85% 100%, 0% 100%, 0% 15%);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -137,7 +124,7 @@
     background-image: linear-gradient(
       to right bottom,
       $color-primary,
-      $color-secondary
+      $color-quaternary
     );
     box-shadow: 1rem 1rem 2rem rgba($color-black, 0.2);
   }
@@ -151,8 +138,9 @@
   align-items: center;
   background-image: linear-gradient(
     to right bottom,
-    rgba($color-primary, 1),
-    rgba($color-secondary, 1)
+    $color-primary 45%,
+    rgba($color-quaternary, 0.75),
+    $color-secondary 85%
   );
 }
 
@@ -186,29 +174,32 @@
 
   &-img {
     width: auto;
-    height: 85vh;
+
     position: absolute;
     transition: 1s all;
     &:hover {
-      filter: brightness(140%);
+      filter: brightness(110%);
       @include box-shadow-big($color-white);
     }
   }
 
   &-img--1 {
-    left: 0%;
+    left: -15%;
+    height: 85vh;
   }
 
   &-img--2 {
     left: 25%;
+    height: 85vh;
   }
 
   &-img--3 {
-    left: 50%;
+    left: 55%;
+    height: 85vh;
   }
 
   &-img--4 {
-    top: 0%;
+    height: 90vh;
     left: 75%;
   }
 }
@@ -216,7 +207,7 @@
 .footer {
   height: 55vh;
   width: 100vw;
-  background-color: rgb(56, 56, 56);
+  background-color: $color-grey-5;
 
   display: flex;
   align-items: center;
@@ -230,15 +221,16 @@
   }
 
   &-copyright-name {
+    @include font-special2;
     font-size: 4rem;
     display: inline-block;
     transition: 0.5s padding, 0.6s 0.3s transform, 0.3s 0.8s letter-spacing;
-
+    letter-spacing: 1rem;
     &:hover {
-      padding: 6rem;
+      padding: 8rem;
       color: $color-secondary;
       transform: scale(1.25);
-      letter-spacing: 1rem;
+      letter-spacing: 1.5rem;
     }
   }
 }
@@ -255,7 +247,7 @@
     margin: 0 5rem;
     height: 40vh;
     padding: 3.5rem;
-    background: rgb(240, 240, 240);
+    background: $color-white;
     align-self: stretch;
     border-radius: 0.2rem;
     @include box-shadow-big($color-black);
