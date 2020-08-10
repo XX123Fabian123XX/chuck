@@ -354,25 +354,22 @@ body {
 
 .gallery {
   clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
-  height: 85vh;
-  position: relative;
-  z-index: 10; }
+  z-index: 10;
+  display: flex; }
   .gallery-img {
-    width: auto;
-    position: absolute;
-    transition: 1s all; }
+    height: 85vh;
+    width: 25vw;
+    background-size: cover;
+    background-position: center;
+    transition: .5s all; }
     .gallery-img:hover {
-      filter: brightness(110%);
+      filter: brightness(120%);
       box-shadow: 1rem 1rem 1.5rem rgba(255, 255, 255, 0.3); }
   .gallery-img--1 {
-    left: -15%;
-    height: 85vh; }
+    background-image: url(../img/gallery-1.jpg); }
   .gallery-img--2 {
-    left: 27%;
-    height: 85vh; }
+    background-image: url(../img/gallery-2.jpg); }
   .gallery-img--3 {
-    left: 55%;
-    height: 85vh; }
+    background-image: url(../img/gallery-3.jpg); }
   .gallery-img--4 {
-    height: 85vh;
-    left: 76%; }
+    background-image: url(../img/gallery-4.jpg); }

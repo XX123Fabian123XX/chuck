@@ -219,39 +219,41 @@
 ////////////////////////////////////////////////////
 ///////////// GALLERY
 .gallery {
-  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
-  height: 85vh;
-  position: relative;
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);  
   z-index: 10;
+  display:flex;
+  
+
 
   &-img {
-    width: auto;
+    height:85vh;
+    width:25vw;
 
-    position: absolute;
-    transition: 1s all;
+    background-size: cover;
+    background-position: center;
+    
+    transition: .5s all;
+
     &:hover {
-      filter: brightness(110%);
+      filter: brightness(120%);
       @include box-shadow-big($color-white);
     }
   }
 
   &-img--1 {
-    left: -15%;
-    height: 85vh;
+    background-image: url(../img/gallery-1.jpg);
+    
   }
 
   &-img--2 {
-    left: 27%;
-    height: 85vh;
+    background-image: url(../img/gallery-2.jpg) ;
   }
 
   &-img--3 {
-    left: 55%;
-    height: 85vh;
+    background-image: url(../img/gallery-3.jpg);
   }
 
   &-img--4 {
-    height: 85vh;
-    left: 76%;
+    background-image: url(../img/gallery-4.jpg);
   }
 }
