@@ -10,7 +10,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #f7f7f7;
+  background-color: whitesmoke;
   line-height: 1.6;
   height: 100vh; }
 
@@ -129,7 +129,8 @@ body {
     letter-spacing: 0.35rem; }
 
 .section-skills {
-  padding: 35rem 0 10rem 0; }
+  padding: 35rem 0 50rem 0;
+  background-color: #e6e6e6; }
   .section-skills-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -151,6 +152,7 @@ body {
   align-items: center;
   clip-path: polygon(0 0, 100% 13%, 100% 87%, 0 100%);
   padding: 35rem 0;
+  margin-top: -32rem;
   background-image: linear-gradient(to right bottom, #c27e5e 45%, rgba(245, 213, 30, 0.75), #d38e3f 85%); }
   .section-facts-box {
     display: grid;
@@ -163,24 +165,23 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh; }
+  height: 100vh;
+  background-color: whitesmoke; }
   .section-generate-fact-top {
     margin: 0 5rem;
     height: 40vh;
     padding: 3.5rem;
-    background: #fff;
+    border-bottom: 1px solid #d38e3f;
+    background-color: #e1e1e1;
     align-self: stretch;
     border-radius: 0.2rem;
-    box-shadow: 1rem 1rem 1.5rem rgba(0, 0, 0, 0.3);
     transition: 0.5s all; }
     .section-generate-fact-top:hover {
-      transform: translateY(-0.5rem);
-      box-shadow: 1rem 1rem 1.5rem rgba(194, 126, 94, 0.3); }
+      box-shadow: 0.4rem 0.4rem 1rem rgba(194, 80, 74, 0.3); }
   .section-generate-fact-text {
-    color: #fff;
+    color: #c27e5e;
     font-size: 3rem;
-    font-family: "Oswald", sans-serif;
-    color: #8a8a8a; }
+    font-family: "Oswald", sans-serif; }
 
 .section-gallery {
   padding: 10rem 0;
@@ -370,7 +371,7 @@ body {
     left: 27%;
     height: 85vh; }
   .gallery-img--3 {
-    left: 56%;
+    left: 55%;
     height: 85vh; }
   .gallery-img--4 {
     height: 85vh;

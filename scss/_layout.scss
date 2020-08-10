@@ -103,7 +103,8 @@
 ////////////////////////////////////////////////////
 ///////////// SECTION SKILLS
 .section-skills {
-  padding: 35rem 0 10rem 0;
+  padding: 35rem 0 50rem 0;
+  background-color: $color-grey-3;
 
   &-cards {
     display: grid;
@@ -138,6 +139,7 @@
 
   clip-path: polygon(0 0, 100% 13%, 100% 87%, 0 100%);
   padding: 35rem 0;
+  margin-top:-32rem;
 
   background-image: linear-gradient(
     to right bottom,
@@ -162,28 +164,27 @@
   justify-content: center;
   flex-direction: column;
   height: 100vh;
+  background-color:$color-grey-4;
 
   &-top {
     margin: 0 5rem;
     height: 40vh;
     padding: 3.5rem;
-    background: $color-white;
+    border-bottom:1px solid $color-secondary;
+    background-color:rgb(225,225,225);
     align-self: stretch;
     border-radius: 0.2rem;
-    @include box-shadow-big($color-black);
     transition: 0.5s all;
 
     &:hover {
-      transform: translateY(-0.5rem);
-      @include box-shadow-big($color-primary);
+      @include box-shadow($color-tertiary);
     }
   }
 
   &-text {
-    color: $color-white;
+    color:$color-primary;
     font-size: 3rem;
     @include font-text-2;
-    color: $color-grey-1;
   }
 }
 

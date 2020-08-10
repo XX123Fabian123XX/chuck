@@ -1,50 +1,24 @@
-const button  = document.getElementById("button");
-const textField = document.getElementById("text");
-const navigate = document.getElementById("navigate");
+document.getElementById("button").addEventListener("click",async () => {
+    displayFact( await getFact());
+} )
 
-const fetchFacts  = async () => {
-    const data = await (await fetch("https://api.chucknorris.io/jokes/random")).json();
-    return data;
+
+const getFact = async () => {
+    const data = await (await (await fetch("https://api.chucknorris.io/jokes/random")).json());
+    console.log(data.value.length);
+    return data.value;
 }
 
-const updateFields = async () => {
-    const data = await fetchFacts();
-    console.log(data.value.length)
-    if (data.value.length >= 600) {
-        textField.style.fontsSize = "1.7rem"
+const displayFact = fact => {
+    const text = document.getElementById("text")
+    if (fact.length > 400) {
+        text.style.fontSize = "2.1"
     }
-     else if (data.value.length >= 500) {
-        textField.style.fontSize = "2rem"
-    } else if (data.value.length >= 400) {
-        textField.style.fontSize = "2.2rem";
-    } else if (data.value.length >=250) {
-        textField.style.fontSize = "2.5rem"
-    }
-    else {
-        textField.style.fontSize = "3rem";
+    else if (fact.length > 180) {
+        text.style.fontSize = "2.5rem"
+    } else {
+        text.style.fontSize="3rem";
     }
 
-    // textField.textContent = data.value
-    textField.textContent = data.value;
+    text.textContent = fact
 }
-
-button.addEventListener("click", updateFields)
-
-navigate.addEventListener("click",() => {
-})
-
-// generate a first random fact
-updateFields();
-
-// for(let i = 0;i<5000;i++) {
-//     setTimeout(() => {
-//         updateFields()
-//     },50 * i);
-// }
-
-
-
-
-
-
-
